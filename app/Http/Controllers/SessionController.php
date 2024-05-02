@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Barryvdh\DomPDF\Facade\Pdf;
+//use Mccarlosen\LaravelMpdf\Facades\LaravelMpdf as PDF;
 
 class SessionController extends Controller
 {
@@ -67,11 +68,53 @@ class SessionController extends Controller
                     $user_object->$key = $value;
                     }
     
-                    dd($user_object);
                 $pdf = PDF::loadView('detail.printDetail', $user_object);
                 return $pdf->download('payfix.pdf');
                 }
             }
+
+
+            public function printdetail_1864($user_name){
+                $sql_username = DB::select("select * from PAY_FIX_2019 where emp_id2='$user_name'");
+                if (!empty($sql_username)) {
+                    // Convert the array result into an object
+                        $user_object = new \stdClass();
+                        foreach ($sql_username[0] as $key => $value) {
+                        $user_object->$key = $value;
+                        }
+                //var_dump($user_object);
+                $data = [
+                    'name4' => $user_object->name4,
+                    'emp_id2' => $user_object->emp_id2,
+                    'office5' => $user_object->office5,
+                    'birtdate6' => $user_object->birtdate6,
+                    'firstjoiningdate7' => $user_object->firstjoiningdate7,
+                    'postname12' => $user_object->postname12,
+                    'joindate15' => $user_object->joindate15,
+                    'basic14' => $user_object->basic14,
+                    'grade13' => $user_object->grade13,
+                    'pastpost8' => $user_object->pastpost8,
+                    'pastpostjoindate9' => $user_object->pastpostjoindate9,
+                    'pastpostbasic10' => $user_object->pastpostbasic10,
+                    'pastpostgrossbasic11' => $user_object->pastpostgrossbasic11,
+                    'grade3' => $user_object->grade3,
+                    'sl16' => $user_object->sl16,
+                    'sl17' => $user_object->sl17,
+                    'sl182' => $user_object->sl182,
+                    'sl181' => $user_object->sl181,
+                    'sl20' => $user_object->sl20,
+                    'sl19' => $user_object->sl19
+                ];
+                //var_dump($data);
+                //return $user_object;
+                $pdf = PDF::loadView('detail.print_view', $data);
+                //return $pdf->download('payfix.pdf');
+                return $pdf->stream();
+                //return view('detail.print_view', compact('data'));
+            }
+            
+            
     
         }
 
+    }

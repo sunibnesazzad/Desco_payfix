@@ -33,10 +33,10 @@
                                         <td width='350'><div class="text-left" style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:16px;'>: {{$user_object->name4}} (আইডি {{$user_object->emp_id2}} )</div></td>
                                     </tr>
                                     <tr>
-                            <td width='20'><div class="text-left" style='font-family:NikoshBAN; font-size:13px;'>২।</div></td>    
-                            <td width='400'><div class="text-left" style='font-family:NikoshBAN; font-size:13px;'>অফিস/দপ্তরের নাম</div></td>    
-                            <td width='350'><div class="text-left" style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:16px;'>: {{$user_object->office5}}</div></td>
-                    </tr>
+                                        <td width='20'><div class="text-left" style='font-family:NikoshBAN; font-size:13px;'>২।</div></td>    
+                                        <td width='400'><div class="text-left" style='font-family:NikoshBAN; font-size:13px;'>অফিস/দপ্তরের নাম</div></td>    
+                                        <td width='350'><div class="text-left" style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:16px;'>: {{$user_object->office5}}</div></td>
+                                    </tr>
                     <tr>
                             <td width='20'><div class="text-left" style='font-family:NikoshBAN; font-size:13px;'>৩।</div></td>    
                             <td width='400'><div class="text-left" style='font-family:NikoshBAN; font-size:13px;'>জন্ম তারিখ (দিন-মাস-বছর)</div></td>
@@ -197,7 +197,7 @@
                         <div class="row justify-content-center">
                                 <div class="col-6" style="font-size: 17px; text-align: center;">
                                 </br>
-                                <button id="" type="button" class="btn btn-primary"><a class="btn btn-success" href="{!! route('print_pdf',$user_object->emp_id2) !!}">Print</a></button>
+                                <button id="" type="button" class="btn btn-primary"><a class="btn btn-success" >Print</a></button>
                                         </br></br>
                                 </div>
                         </div>
