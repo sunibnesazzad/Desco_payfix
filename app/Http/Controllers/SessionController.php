@@ -107,7 +107,8 @@ class SessionController extends Controller
                 ];
                 //var_dump($data);
                 //return $user_object;
-                $pdf = PDF::loadView('detail.print_view', $data);
+                
+                $pdf = PDF::loadView('detail.print_view', $data)->setOption(['dpi' => 115,'defaultFont' => 'NikoshBAN']);
                 //return $pdf->download('payfix.pdf');
                 return $pdf->stream();
                 //return view('detail.print_view', compact('data'));
