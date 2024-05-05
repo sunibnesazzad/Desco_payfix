@@ -3,9 +3,8 @@
 <head>
 <style type="text/css">
     
-    @font-face {
-    font-family: 'Nikosh';
-    src: url('{{ public_path("fonts/Nikosh.ttf") }}') format('truetype');
+    body {
+    font-family: 'solaiman_lipi', sans-serif;
   }
 
   </style>

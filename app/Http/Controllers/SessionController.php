@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use Barryvdh\DomPDF\Facade\Pdf;
+use Mpdf\MpdfException;
+use PDF;
 //use Mccarlosen\LaravelMpdf\Facades\LaravelMpdf as PDF;
 
 class SessionController extends Controller
@@ -108,7 +109,7 @@ class SessionController extends Controller
                 //var_dump($data);
                 //return $user_object;
                 
-                $pdf = PDF::loadView('detail.print_view', $data)->setOption(['dpi' => 115,'defaultFont' => 'NikoshBAN']);
+                $pdf = PDF::loadView('detail.print_view', $data);
                 //return $pdf->download('payfix.pdf');
                 return $pdf->stream();
                 //return view('detail.print_view', compact('data'));

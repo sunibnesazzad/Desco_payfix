@@ -1,3 +1,6 @@
 For OCI8 environment setup in php 7.4.12 see: https://www.youtube.com/watch?v=AxOrNSsbhNI
 For Db connection in Laravel : https://www.youtube.com/watch?v=i9C2thlgOg8
-For Intalling Dompdf : https://www.youtube.com/watch?v=919OCLKM-jU
+(Font is not Right It breakes)For Intalling Dompdf : https://www.youtube.com/watch?v=919OCLKM-jU
+Using Mpdf for Right Font : https://laracasts.com/discuss/channels/laravel/bengali-font-problem-an-article-is-generated-as-pdf
+For Pdf Use : https://github.com/niklasravnsborg/laravel-pdf
+
