@@ -26,5 +26,5 @@ Route::get('/register',[SessionController::class, 'store']);
 Route::get('/print_detail/{user_name}',[SessionController::class, 'printdetail'])->name('print_pdf');
 
 //for pdf testing route
-Route::get('/print_detail/{user_name}',[SessionController::class, 'printdetail_1864']);
+//Route::get('/print_detail/{user_name}',[SessionController::class, 'printdetail_1864']);
 

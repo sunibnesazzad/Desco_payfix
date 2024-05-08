@@ -53,7 +53,8 @@ class SessionController extends Controller
             //return view('detail.detail', compact('user_object','verified_user'))->with('title', "DESCO Pay_FIX");
             return view('detail.printDetail', compact('user_object','verified_user'))->with('title', "DESCO Pay_FIX");
         } else {
-            echo "No user found.";
+            //echo "No user found.";
+            return redirect()->back()->with('message',"No user found.");
         }
     }
 
@@ -75,6 +76,7 @@ class SessionController extends Controller
             }
 
 
+            //This function only for tensting purpose
             public function printdetail_1864($user_name){
                 $sql_username = DB::select("select * from PAY_FIX_2019 where emp_id2='$user_name'");
                 if (!empty($sql_username)) {
@@ -110,7 +112,7 @@ class SessionController extends Controller
                 //return $user_object;
                 
                 $pdf = PDF::loadView('detail.print_view', $data);
-                //return $pdf->download('payfix.pdf');
+                 $pdf->download('payfix.pdf');
                 return $pdf->stream();
                 //return view('detail.print_view', compact('data'));
             }

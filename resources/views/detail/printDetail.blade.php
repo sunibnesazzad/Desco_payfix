@@ -125,7 +125,7 @@
                                         <tr>
                                                 <td width='190' style=\"vertical-align:top\"> <div class="text-left" style='font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;'>: {{$user_object->sl182}} &nbsp; ({{$user_object->sl181}})</div> </td>
                                                 <td width='150' class="text-left">
-                                               <!-- @if ($user_object->sl20 != '0') সরকারী প্রজ্ঞাপন অনুযায়ী পূর্বের পদের বেতন প্রবৃদ্ধি তারিখ বহাল রাখা হলো। @endif -->
+                                                @if ($user_object->sl20 != '0') সরকারী প্রজ্ঞাপন অনুযায়ী পূর্বের পদের বেতন প্রবৃদ্ধি তারিখ বহাল রাখা হলো। @endif 
                                                 </td>
                                         </tr> 
                                 </table>
@@ -197,9 +197,10 @@
                         <div class="row justify-content-center">
                                 <div class="col-6" style="font-size: 17px; text-align: center;">
                                 </br>
-                                <button id="" type="button" class="btn btn-primary"><a class="btn btn-success" >Print</a></button>
+                                <button id="" type="button" class="btn btn-primary"><a class="btn btn-success" href="/print_detail/{{$user_object->emp_id2}}">Print</a></button>
                                         </br></br>
                                 </div>
+                                
                         </div>
                 </div>
             </td>

@@ -62,6 +62,19 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        // Adding Oracle code
+        'oracle' => [
+            'driver' => 'oracle',
+            'host' => '172.21.18.6',
+            'port' => '1521',
+            'database' => ' ',
+            'service_name' => 'HMIS',
+            'username' => 'PAFIX',
+            'password' => 'pafixation89',
+            'charset' => '',
+            'prefix' => '',
+            ],
+            
 
         'pgsql' => [
             'driver' => 'pgsql',

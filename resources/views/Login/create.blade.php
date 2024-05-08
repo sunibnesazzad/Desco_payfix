@@ -15,6 +15,11 @@
 	<body>
 	<section class="ftco-section">
 		<div class="container">
+		@if(session()->has('message'))
+    	<div class="alert alert-success text-center">
+        	{{ session()->get('message') }}
+    	</div>
+		@endif
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
 					<h2 class="heading-section">Desco Pay Slip</h2>
